@@ -1,1 +1,1 @@
-archivo de cinfiguracion
+archivo de configuracion
