@@ -1,0 +1,46 @@
+1) SELECT 
+    d.department_id,
+    d.department_name,
+    e.employee_id,
+    e.first_name,
+    e.last_name
+    FROM 
+    departments d
+    LEFT JOIN employees e ON d.department_id = e.department_id
+    ORDER BY 
+    d.department_name,
+    e.last_name,
+    e.first_name;
+
+2)SELECT 
+    department_id
+   FROM 
+    employees
+   WHERE 
+    department_id IS NOT NULL
+   GROUP BY 
+    department_id
+   HAVING 
+       COUNT(*) > 10;
+    
+3)UPDATE employees 
+   SET salary = salary * 1.06
+   WHERE job_id = 'IT_PROG';
+   
+4)SELECT 
+    e.first_name AS nombre,
+    e.last_name AS apellido,
+    e.salary AS salario,
+    e.department_id AS numero_departamento,
+    e.job_id AS trabajo
+   FROM 
+    employees e
+   WHERE 
+    e.job_id = (
+        SELECT job_id 
+        FROM employees 
+        WHERE first_name = 'William' 
+        AND last_name = 'Smith'
+    )
+   ORDER BY 
+      e.last_name;   
