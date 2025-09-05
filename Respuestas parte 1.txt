@@ -1,0 +1,49 @@
+1) Una CTE (Common Table Expression) es temporal, tiene solamente alcance local, y es recursiva. 
+En cambio, una VISTA es persistente, puede utilizarse en cualquier lugar dentro de la base de datos y no puede llamarse a si misma.
+
+2) Son operaciones que permiten combinar datos de multiples tablas en una sola consulta. Son esenciales porque las RDBMS almacenan informacion distribuida en multiples tablas
+LEFT OUTER  JOIN: devuelve todos los registros de la tabla izquierda y solamente los coincidentes en la derecha, muestra NULL en caso de que no haya coicidencia.
+INNER JOIN: devuelve regiostros con coicidencias en ambas tablas.
+
+SELF JOIN: es  una union consigo misma. Se utiliza cuando se necesita comparar dos filas dentro de una misma tabla.
+3)  Una Primary Key (PK, Clave Principal) es un campo que identifica de manera unica cada registro de una tabla de BBDD. Puede ser compuesta y estar formada por multiples campos.
+Como ejemplo, crearia una tablaen la que podria identificar a estudiantes 
+en especifico con una Clave Primaria Compuesta de "estudiante_id" y "curso_id", ambas Foreign Keys (FK, Clave Foranea).
+
+4) Se diferencias porque WHERE se aplica antes de agrupar datos y no puede usar funciones de agregacion. En cambio, HAVING se aplica despues de agrupar datos junto con el GROUP BY 
+y puede usar funciones de agregacion.
+
+5) La normalizacion en SQL es una proceso cuyos objetivos son eliminar redundancias y evitar anomalias al insertar, actualizar o eliminar informacion.
+Se dividen 3 Formas Normales (FN)
+1FN: separar datos multivaluados en una nueva entidad.
+2FN: todo campo no clave debe depender unica de una Clave Primaria.
+3FN: un campo No Clave no puede depender de otra Clave Primaria.
+ 
+6) Un indice es una estructura de datos que se utiliza para optimizar la velocidad de busqueda de datos de la BBDD. Se utilizan porque son una buena manera de optimizar las BBDD,
+aunque tiene la desventaja de que necesitan actualizaciones constantes a medida que la BBDD crece.
+
+7) Los resultados que utlizan funciones agregadas se agrupan con la funciones GROUP BY. Las funciones agregadas (SUM, AVG, COUNT, ETC.) pueden afectar el rendimiento porque requieren
+procesar todos los registros del conjunto de datos.
+
+8) En un escenario comun, en el que se necesite encontrar as todos los empleados que ganan mas que el promedio y adermas trabajan en departamentos de mas de 10 empleados, seria muy
+complejo de lograr sin utilizar subconsultas, requeriria multiples consultas separadas con logica adicional. Con una subconsulta, se simplificarias el problema al mantaner toda la
+logica en una consulta legible.
+
+9)Una transaccionm en SQL es una secuencia de una o mas declaraciones ejecutadas como una unica unidad de trabajo. Su proposito es que todas las operaciones sean completadas
+correctamente o hacer ROLLBACK si un error ocurre. Las propiedades ACID son:
+Atomicidad: toda informacion DEBE completarse correctamente o hacer ROLLBACK en caso de que una parte de esta falle.
+Consistencia: las transacciones DEBEN mantener restricciones de integridad al moverse de un estado valido a otro.
+Aislamiento: las transacciones estan aisladas la una de la otra para asegurar precision en los datos.
+Durabilidad: en caso de que el sistema falle, las transacciones seguiran en efecto.
+
+10) El proceso para administrar índices comienza con el análisis de planes de ejecución utilizando EXPLAIN PLAN para identificar consultas costosas, 
+seguido del examen de consultas frecuentes mediante AWR para determinar patrones de acceso e identificar columnas críticas, 
+la creación de índices específicos (B-tree, bitmap, funcionales) según el tipo de datos monitoreando su efectividad con V$OBJECT_USAGE, 
+y finalmente tareas de mantenimiento regular como actualización de estadísticas con DBMS_STATS y eliminación de índices no utilizados.
+
+11) La logica condicional de una sentencia SQL se puede realizar con la expresion CASE seguido de WHEN y una condicion, y THEN y un resultado,
+con ELSE  usado si no se cumple ninguna condicion.
+
+12) Es mejor usar TRIGGERS cuando se necesite automatizacion que debe ejecutarse en respuesta a eventos especificos de la BBDD, sin intervencion del usario o aplicacion. 
+
+
