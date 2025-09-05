@@ -38,12 +38,13 @@ Durabilidad: en caso de que el sistema falle, las transacciones seguiran en efec
 
 10) El proceso para administrar índices comienza con el análisis de planes de ejecución utilizando EXPLAIN PLAN para identificar consultas costosas, 
 seguido del examen de consultas frecuentes mediante AWR para determinar patrones de acceso e identificar columnas críticas, 
-la creación de índices específicos (B-tree, bitmap, funcionales) según el tipo de datos monitoreando su efectividad con V$OBJECT_USAGE, 
+la creación de índices específicos según el tipo de datos monitoreando su efectividad con V$OBJECT_USAGE, 
 y finalmente tareas de mantenimiento regular como actualización de estadísticas con DBMS_STATS y eliminación de índices no utilizados.
 
 11) La logica condicional de una sentencia SQL se puede realizar con la expresion CASE seguido de WHEN y una condicion, y THEN y un resultado,
 con ELSE  usado si no se cumple ninguna condicion.
 
 12) Es mejor usar TRIGGERS cuando se necesite automatizacion que debe ejecutarse en respuesta a eventos especificos de la BBDD, sin intervencion del usario o aplicacion. 
+
 
 
