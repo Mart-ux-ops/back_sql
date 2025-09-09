@@ -10,8 +10,8 @@ SELF JOIN: es una union consigo misma. Se utiliza cuando se necesita comparar do
 Como ejemplo, crearia una tablaen la que podria identificar a estudiantes 
 en especifico con una Clave Primaria Compuesta de "estudiante_id" y "curso_id", ambas Foreign Keys (FK, Clave Foranea).
 
-4) Se diferencias porque WHERE se aplica antes de agrupar datos y no puede usar funciones de agregacion. En cambio, HAVING se aplica despues de agrupar datos junto con el GROUP BY 
-y puede usar funciones de agregacion.
+4) Se diferencian porque WHERE se aplica antes de agrupar datos y no puede usar funciones de agregacion. En cambio, HAVING se aplica despues de agrupar datos junto con el GROUP BY 
+y puede utilizar funciones de agregacion.
 
 5) La normalizacion en SQL es una proceso cuyos objetivos son eliminar redundancias y evitar anomalias al insertar, actualizar o eliminar informacion.
 Se dividen 3 Formas Normales (FN)
@@ -45,6 +45,7 @@ y finalmente tareas de mantenimiento regular como actualización de estadística
 con ELSE  usado si no se cumple ninguna condicion.
 
 12) Es mejor usar TRIGGERS cuando se necesite automatizacion que debe ejecutarse en respuesta a eventos especificos de la BBDD, sin intervencion del usario o aplicacion. 
+
 
 
 
