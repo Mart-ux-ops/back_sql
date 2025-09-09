@@ -4,9 +4,9 @@ En cambio, una VISTA es persistente, puede utilizarse en cualquier lugar dentro 
 2) Son operaciones que permiten combinar datos de multiples tablas en una sola consulta. Son esenciales porque las RDBMS almacenan informacion distribuida en multiples tablas
 LEFT OUTER  JOIN: devuelve todos los registros de la tabla izquierda y solamente los coincidentes en la derecha, muestra NULL en caso de que no haya coicidencia.
 INNER JOIN: devuelve regiostros con coicidencias en ambas tablas.
-
 SELF JOIN: es  una union consigo misma. Se utiliza cuando se necesita comparar dos filas dentro de una misma tabla.
-3)  Una Primary Key (PK, Clave Principal) es un campo que identifica de manera unica cada registro de una tabla de BBDD. Puede ser compuesta y estar formada por multiples campos.
+
+3) Una Primary Key (PK, Clave Principal) es un campo que identifica de manera unica cada registro de una tabla de BBDD. Puede ser compuesta y estar formada por multiples campos.
 Como ejemplo, crearia una tablaen la que podria identificar a estudiantes 
 en especifico con una Clave Primaria Compuesta de "estudiante_id" y "curso_id", ambas Foreign Keys (FK, Clave Foranea).
 
@@ -29,7 +29,7 @@ procesar todos los registros del conjunto de datos.
 complejo de lograr sin utilizar subconsultas, requeriria multiples consultas separadas con logica adicional. Con una subconsulta, se simplificarias el problema al mantaner toda la
 logica en una consulta legible.
 
-9)Una transaccionm en SQL es una secuencia de una o mas declaraciones ejecutadas como una unica unidad de trabajo. Su proposito es que todas las operaciones sean completadas
+9) Una transaccionm en SQL es una secuencia de una o mas declaraciones ejecutadas como una unica unidad de trabajo. Su proposito es que todas las operaciones sean completadas
 correctamente o hacer ROLLBACK si un error ocurre. Las propiedades ACID son:
 Atomicidad: toda informacion DEBE completarse correctamente o hacer ROLLBACK en caso de que una parte de esta falle.
 Consistencia: las transacciones DEBEN mantener restricciones de integridad al moverse de un estado valido a otro.
@@ -45,6 +45,7 @@ y finalmente tareas de mantenimiento regular como actualización de estadística
 con ELSE  usado si no se cumple ninguna condicion.
 
 12) Es mejor usar TRIGGERS cuando se necesite automatizacion que debe ejecutarse en respuesta a eventos especificos de la BBDD, sin intervencion del usario o aplicacion. 
+
 
 
 
