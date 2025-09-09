@@ -22,7 +22,8 @@ Se dividen 3 Formas Normales (FN)
 6) Un indice es una estructura de datos que se utiliza para optimizar la velocidad de busqueda de datos de la BBDD. Se utilizan porque son una buena manera de optimizar las BBDD,
 aunque tiene la desventaja de que necesitan actualizaciones constantes a medida que la BBDD crece.
 
-7) Los resultados que utlizan funciones agregadas se agrupan con la funciones GROUP BY. Las funciones agregadas (SUM, AVG, COUNT, ETC.) pueden afectar el rendimiento porque requieren procesar todos los registros del conjunto de datos.
+7) Los resultados que utlizan funciones agregadas se agrupan con la funciones GROUP BY. Las funciones agregadas (SUM, AVG, COUNT, ETC.) pueden afectar el rendimiento porque 
+requieren procesar todos los registros del conjunto de datos.
 
 8) En un escenario comun, en el que se necesite encontrar as todos los empleados que ganan mas que el promedio y adermas trabajan en departamentos de mas de 10 empleados, seria muy
 complejo de lograr sin utilizar subconsultas, requeriria multiples consultas separadas con logica adicional. Con una subconsulta, se simplificarias el problema al mantaner toda la
@@ -44,6 +45,7 @@ y finalmente tareas de mantenimiento regular como actualización de estadística
 con ELSE  usado si no se cumple ninguna condicion.
 
 12) Es mejor usar TRIGGERS cuando se necesite automatizacion que debe ejecutarse en respuesta a eventos especificos de la BBDD, sin intervencion del usario o aplicacion. 
+
 
 
 
