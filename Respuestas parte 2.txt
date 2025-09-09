@@ -12,7 +12,7 @@
     e.last_name,
     e.first_name;
 
-2)SELECT 
+2) SELECT 
     department_id
    FROM 
     employees
@@ -23,11 +23,11 @@
    HAVING 
        COUNT(*) > 10;
     
-3)UPDATE employees 
+3) UPDATE employees 
    SET salary = salary * 1.06
    WHERE job_id = 'IT_PROG';
    
-4)SELECT 
+4) SELECT 
     e.first_name AS nombre,
     e.last_name AS apellido,
     e.salary AS salario,
@@ -44,3 +44,4 @@
     )
    ORDER BY 
       e.last_name;   
+
